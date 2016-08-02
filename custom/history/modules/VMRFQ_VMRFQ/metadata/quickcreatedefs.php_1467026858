@@ -1,0 +1,270 @@
+<?php
+$module_name = 'VMRFQ_VMRFQ';
+$viewdefs [$module_name] = 
+array (
+  'QuickCreate' => 
+  array (
+    'templateMeta' => 
+    array (
+      'maxColumns' => '3',
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        2 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+    ),
+    'panels' => 
+    array (
+      'default' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'sub_commodity_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SUB_COMMODITY',
+          ),
+          1 => 
+          array (
+            'name' => 'vm_c',
+            'studio' => 'visible',
+            'label' => 'LBL_VM',
+          ),
+          2 => 
+          array (
+            'name' => 'sku_sku_vmrfq_vmrfq_1_name',
+            'label' => 'LBL_SKU_SKU_VMRFQ_VMRFQ_1_FROM_SKU_SKU_TITLE',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'total_excise_cost_c',
+            'label' => 'LBL_TOTAL_EXCISE_COST',
+          ),
+          1 => 
+          array (
+            'name' => 'fp_event_locations_vmrfq_vmrfq_1_name',
+            'label' => 'LBL_FP_EVENT_LOCATIONS_VMRFQ_VMRFQ_1_FROM_FP_EVENT_LOCATIONS_TITLE',
+          ),
+          2 => 
+          array (
+            'name' => 'requested_quantity_c',
+            'label' => 'LBL_REQUESTED_QUANTITY',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'uom_c',
+            'studio' => 'visible',
+            'label' => 'LBL_UOM',
+          ),
+          1 => 
+          array (
+            'name' => 'sku_sku_vmrfq_vmrfq_2_name',
+            'label' => 'LBL_SKU_SKU_VMRFQ_VMRFQ_2_FROM_SKU_SKU_TITLE',
+          ),
+          2 => 
+          array (
+            'name' => 'provided_quantity_c',
+            'label' => 'LBL_PROVIDED_QUANTITY',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'margin_percent_c',
+            'label' => 'LBL_MARGIN_PERCENT',
+          ),
+          1 => '',
+          2 => '',
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'purchase_cost_per_unit_c',
+            'label' => 'LBL_PURCHASE_COST_PER_UNIT',
+          ),
+          1 => 
+          array (
+            'name' => 'excise_per_unit_c',
+            'label' => 'LBL_EXCISE_PER_UNIT',
+          ),
+          2 => '',
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'vendor_tax_percent_c',
+            'label' => 'LBL_VENDOR_TAX_PERCENT',
+          ),
+          1 => 
+          array (
+            'name' => 'vendor_tax_amount_c',
+            'label' => 'LBL_VENDOR_TAX_AMOUNT',
+          ),
+          2 => 
+          array (
+            'name' => 'vendor_taxation_type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_VENDOR_TAXATION_TYPE',
+          ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'form_type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_FORM_TYPE',
+          ),
+          1 => 
+          array (
+            'name' => 'loading_charges_c',
+            'label' => 'LBL_LOADING_CHARGES',
+          ),
+          2 => 
+          array (
+            'name' => 'customer_loading_charges_c',
+            'label' => 'LBL_CUSTOMER_LOADING_CHARGES',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'customer_freight_charges_c',
+            'label' => 'LBL_CUSTOMER_FREIGHT_CHARGES',
+          ),
+          1 => 
+          array (
+            'name' => 'professional_charges_c',
+            'label' => 'LBL_PROFESSIONAL_CHARGES',
+          ),
+          2 => 
+          array (
+            'name' => 'vendor_credit_days_c',
+            'label' => 'LBL_VENDOR_CREDIT_DAYS',
+          ),
+        ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'freight_charges_c',
+            'label' => 'LBL_FREIGHT_CHARGES',
+          ),
+          1 => 
+          array (
+            'name' => 'total_purchase_cost_c',
+            'label' => 'LBL_TOTAL_PURCHASE_COST',
+          ),
+          2 => 
+          array (
+            'name' => 'sales_rate_per_unit_c',
+            'label' => 'LBL_SALES_RATE_PER_UNIT',
+          ),
+        ),
+        9 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        10 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        11 => 
+        array (
+          0 => 
+          array (
+            'name' => 'margin_cost_c',
+            'label' => 'LBL_MARGIN_COST',
+          ),
+        ),
+        12 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        13 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        14 => 
+        array (
+          0 => 
+          array (
+            'name' => 'customer_tax_c',
+            'label' => 'LBL_CUSTOMER_TAX',
+          ),
+          1 => '',
+        ),
+        15 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        16 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        17 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        18 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+        ),
+        19 => 
+        array (
+          0 => '',
+        ),
+      ),
+    ),
+  ),
+);
+?>

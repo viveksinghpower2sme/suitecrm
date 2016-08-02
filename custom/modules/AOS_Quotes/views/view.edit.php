@@ -1,0 +1,174 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+/*********************************************************************************
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+
+ * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
+ * Copyright (C) 2011 - 2014 Salesagility Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ *
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ *
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ *
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * reasonably feasible for  technical reasons, the Appropriate Legal Notices must
+ * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ ********************************************************************************/
+
+
+class AOS_QuotesViewEdit extends ViewEdit
+{
+ 	public function __construct()
+ 	{
+   		parent::ViewEdit();
+   		$this->useForSubpanel = true;
+   		$this->useModuleQuickCreateTemplate = true;
+ 	}
+
+	public function display(){
+
+	    global $db;
+		
+		//print "<pre>"; print_r($GLOBALS['app_list_strings']['rfq_state_list'])	;
+		//echo "<pre>"; print_r($this->bean->fetched_row);die;
+		if(!empty($this->bean->fetched_row['warehouse_location_c'])){
+			$GLOBALS['app_list_strings']['warehouse_location_c_list'][$this->bean->fetched_row['warehouse_location_c']] = $this->bean->fetched_row['warehouse_location_c'];
+		}
+				
+		//RFQ stage handling
+		unset($GLOBALS['app_list_strings']['rfq_state_list']);
+		if(!empty($this->ev->focus->id) && !empty($this->ev->focus->rfq_state_c)) 	// Edit mode
+		{
+			$GLOBALS['app_list_strings']['rfq_state_list'][$this->ev->focus->rfq_state_c] = $this->ev->focus->rfq_state_c;
+		}
+		else{
+				$GLOBALS['app_list_strings']['rfq_state_list']['new'] = 'new';	// For new RFQ
+			
+		}
+	
+		if(!empty($this->bean->fetched_row['category_c'])){
+			$GLOBALS['app_list_strings']['category_c_list'][$this->bean->fetched_row['category_c']] = $this->bean->fetched_row['category_c'];
+		}		
+		
+		
+		
+	    //InCase of Edit record
+      	if(!empty($this->ev->focus->id))
+      	{
+			$RecordID = $this->ev->focus->id;
+			$prevval = '';
+			$DeleteFrwd = 0;
+			/*
+			foreach($GLOBALS['app_list_strings']['rfq_state_list'] as $key=>$val)
+			{
+				if($DeleteFrwd)
+				{
+					unset($GLOBALS['app_list_strings']['rfq_state_list'][$key]);
+					continue;
+				}
+				if($prevval && $key != $this->ev->focus->rfq_state_c)
+				{
+					unset($GLOBALS['app_list_strings']['rfq_state_list'][$prevval]);
+				}
+				if($key == $this->ev->focus->rfq_state_c)
+				{
+					$DeleteFrwd = 1;
+				}
+				$prevval = $key;
+			}*/
+			//print "<pre>"; print_r($this->ev->focus->rfq_state_c);
+			$vmrfqBean="";
+			$quotesBean = BeanFactory::getBean('AOS_Quotes',$RecordID);
+			if($quotesBean->load_relationship('aos_quotes_vmrfq_vmrfq_1')){
+				$vmrfqBean=$quotesBean->aos_quotes_vmrfq_vmrfq_1->getBeans();
+			}
+			//echo "<pre>";print_r($vmrfqBean);die;
+			$i = 0;
+			$Record = array();
+			foreach($vmrfqBean as $id=>$bean)
+			{
+
+				$requestedSkuBean = BeanFactory::getBean('sku_SKU',$bean->sku_sku_vmrfq_vmrfq_1sku_sku_ida);
+				$providedSkuBean = BeanFactory::getBean('sku_SKU',$bean->sku_sku_vmrfq_vmrfq_2sku_sku_ida);
+				$allfields = $bean->column_fields;
+				$Record[$i]['vmrfqId'] = $id;
+				$Record[$i]['isEdit'] = "bond";
+				$Record[$i]['r_sku_code_c'] = $requestedSkuBean->sku_code_c;
+				$Record[$i]['sku_code_c'] = $providedSkuBean->sku_code_c;
+				$Record[$i]['rfq_state'] = $this->ev->focus->rfq_state_c;
+				//$Record[$i]['taxationType'] =$GLOBALS['app_list_strings']['Elastic_boost_options'][$bean->vendor_taxation_type_c];
+				
+				foreach($allfields as $key=>$val)
+				{
+					$Record[$i][$val] = $bean->$val;
+				}
+				//echo "<pre>"; print_r($bean);die;
+				$i++;
+			}
+			$vmrfqBean = json_encode($Record); 
+		  }
+		  //echo "<pre>";print_r($this->ev->focus);die;
+		  $rfq_data = '<input type="hidden" id="vmrfqrecordedit" name="vmrfqrecordedit" value =\''.$vmrfqBean.'\'>
+						<input type="hidden" id="vmrfqrecorddelete" name="vmrfqrecorddelete" value ="" /> 
+						<input type="hidden" id="final_scm_confirmation_status_c" name="final_scm_confirmation_status_c" value ="" />   
+						<input type="hidden" id="finance_margin" name="finance_margin" value ="'.$this->ev->focus->finance_approved_margin_c.'" />   
+						<input type="hidden" id="issave" name="issave" value="0">
+						<table id="tbl_vmrfqdata1" style="width:62%;">';
+						if($this->ev->focus->rfq_state_c == "new" || $this->ev->focus->rfq_state_c == "")
+						{
+							$rfq_data .='<tr>
+										   <td> 
+											   <span style="width:95% !important;display:inline-block;">
+												 <button type="button" id="add_email" onclick="javascript:CreateNewLineItem()">
+												 <img src="themes/default/images/id-ff-add.png?v=jlL480K5YkTHsr6Wx8BATQ" alt="Array.LBL_ID_FF_ADD">
+												 </button>
+											   </span>
+											   
+										   </td>
+										</tr>';
+						}
+			
+			$RecordID = '"'.$RecordID.'"';			
+			$rfq_data .='<tr>
+						   <td>
+							  <input type="hidden" name="vmrfq_count" id="vmrfq_count" value="0"/>
+							  <input type="hidden" name="vmrfq_count1" id="vmrfq_count1" value="0"/>
+						   </td>
+						</tr>
+					   </table>
+					   <table id="tbl_vmrfqdata" style="width:95%;">
+					   </table>
+					   <script>$(document).ready(function(){
+						  fetchRecords('.$RecordID.');
+					   })</script>';
+
+			 $this->ss->assign('LINEITEMS',$rfq_data);
+			 parent::display();
+    }
+
+
+}

@@ -1,0 +1,10 @@
+<?php
+ if(!defined('TRACTION_DOMAIN')) define('TRACTION_DOMAIN', 'dev.console.affle.com/traction');
+ 
+if(!defined('API_USER')){ define('API_USER','suiteapi');}
+if(!defined('API_PWD')){ define('API_PWD','Admin@1234');}
+$sUserID = 'suiteapi';
+
+$sPasswd = 'Admin@1234';
+
+?>

@@ -1,0 +1,26 @@
+<?php
+// created: 2016-08-01 19:01:36
+$mod_strings = array (
+  'LBL_CINNO' => 'Cinno',
+  'LBL_CATEGORY' => 'Category',
+  'LBL_PINCODE' => 'Pincode',
+  'LBL_STATE' => 'State',
+  'LBL_CITY' => 'City',
+  'LBL_PHONE_NUMBER' => 'Phone Number',
+  'LBL_PAYMENT_TERMS' => 'Payment Terms',
+  'LBL_PAYMENT_METHOD' => 'Payment Method',
+  'LBL_EMAIL' => 'Email',
+  'LBL_TYPE_OF_VENDOR' => 'Type Of Vendor',
+  'LBL_PAN_NUMBER' => 'PAN Number',
+  'LBL_SERVICE_TAX_NUMBER' => 'Service Tax Number',
+  'LBL_GENERAL_BUSINESS_POSTING_GRO' => 'General Business Posting Gro',
+  'LBL_VEND_VENDOR_FP_EVENT_LOCATIONS_2_FROM_FP_EVENT_LOCATIONS_TITLE' => 'Address',
+  'LBL_VEND_VENDOR_FP_EVENT_LOCATIONS_1_FROM_FP_EVENT_LOCATIONS_TITLE' => 'Address',
+  'LBL_EMAIL_ID' => 'Email Id',
+  'LBL_VENDORNAVID' => 'vendorNavId',
+  'LBL_VENDOR_POSTING_GROUP' => 'Vendor Posting Group',
+  'LBL_NUM1' => 'num1',
+  'LBL_NAV_ERROR_LOG_ID' => 'Nav Error Log ID',
+  'LBL_GEN_BUS_POS_C' => 'Gen. Bus. Posting Group',
+  'LBL_SINK_WITH_NAV' => 'Sink With Nav',
+);

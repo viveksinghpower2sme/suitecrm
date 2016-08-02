@@ -1,0 +1,29 @@
+<?php
+
+if (!defined('sugarEntry') || !sugarEntry)
+    die('Not A Valid Entry Point');
+
+require_once('service/randomIdGenerator.php');
+class FP_Event_LocationsJjwg_MapsLogicHook {
+
+
+	function changeAssignedUser(&$bean, $event, $arguments)
+	{
+		
+		if(empty($bean->fetched_row['id']))
+		{
+		
+			$moduleName="ADD";
+			$length=7;
+			$randomId = randomId($length,$moduleName);
+			$bean->assigned_user_id=$bean->created_by;
+			$bean->name = $randomId;
+			//die;
+		}
+		
+		
+	}
+
+	
+
+}

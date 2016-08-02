@@ -1,0 +1,77 @@
+<?php
+
+
+//http://192.168.1.46:7047/DynamicsNAV70/WS/BEBB_India/Codeunit/RFQCreation
+
+
+/* Create a class for your webservice structure, in this case: Contact */
+class test66 {
+    function details()
+    {
+        $info =array("VendorDetails"=>array(
+            'No'=>'123456789sdfeferrrrrrrrrrrrrrrrrf7',
+             'Name'=>'Raj',
+            'PhoneNo'=>'9911991199',
+            'EMail'=>'em@kcm.com',
+            'VendorPostingGroup'=>'SERVICE',
+            'GenBusinessPostingGroup'=>'Domestic',
+            'PANNo'=>'PANMJ9876A',
+            'SoftDelete'=>''
+            ),
+            "AddtionalInformation"=>array(
+                "VendorLocations"=>array(
+                    'lCode'=>'V01',
+                    'lAddress'=>'TEST',
+                    'lAddress2'=>'TEST',
+                    'lPostCode'=>'110019',
+                    'CityCode'=>'edfw',
+                  'StateCode'=>'',
+                  'lTIN'=>'06TINLKJNKL',
+                  'lCST'=>'CST NO',
+                  'lECC'=>'ECC',
+                  'lRange'=>'lRange',
+                  'lDivision'=>'DIV',
+                  'lCollectorate'=>'11',
+                  'lCommissionRate'=>'10',
+                  'lSoftDelete'=>'1',
+                  'Email'=>'test'
+
+                )
+            )
+        );
+
+        return $info;
+    }
+}
+
+/* Initialize webservice with your WSDL */
+$soapParameters = Array('login' => "Bi00257", 'password' => "Admin@1234", 'exceptions' => 0, 'trace'=>1) ;
+
+$client = new SoapClient('RFQCreation.wsdl',$soapParameters);
+
+
+$contact = new test66();
+
+/* Set your parameters for the request */
+$params = array("ImportVendorDetails"=>array("vendorRequest" => $contact->details(),
+                                              "errorMessage" => ""
+    )
+
+);
+//print_r($contact->details()); die;
+
+/* Invoke webservice method with your parameters, in this case: Function1 */
+$response1 = $client->__soapCall("ImportVendorDetails",$params);
+//echo  $client->__getLastRequest() ;
+
+$response = $client->__getLastRequest();
+
+//echo $response;
+
+//print_r($response); die;
+/* Print webservice response */
+var_dump($response1);
+
+?>
+
+

@@ -1,0 +1,15 @@
+<?php
+
+
+
+include 'file/file.php';
+$fileObj = new File();
+
+if(isset($_REQUEST['upload'])) {
+    $fileObj->setTemplate();
+
+    $fileObj->Process($_REQUEST);
+}
+
+
+?>

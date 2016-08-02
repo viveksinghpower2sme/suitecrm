@@ -1,0 +1,68 @@
+<?php
+// created: 2016-06-10 14:21:17
+$layout_defs = array (
+  'number' => 
+  array (
+    'width' => '5%',
+    'vname' => 'LBL_LIST_NUM',
+    'default' => true,
+  ),
+  'name' => 
+  array (
+    'vname' => 'LBL_NAME',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'width' => '25%',
+    'default' => true,
+  ),
+  'billing_account' => 
+  array (
+    'width' => '20%',
+    'vname' => 'LBL_BILLING_ACCOUNT',
+    'default' => true,
+  ),
+  'total_amount' => 
+  array (
+    'type' => 'currency',
+    'vname' => 'LBL_GRAND_TOTAL',
+    'currency_format' => true,
+    'width' => '15%',
+    'default' => true,
+  ),
+  'expiration' => 
+  array (
+    'type' => 'date',
+    'vname' => 'LBL_EXPIRATION',
+    'width' => '15%',
+    'default' => true,
+  ),
+  'assigned_user_name' => 
+  array (
+    'link' => true,
+    'type' => 'relate',
+    'vname' => 'LBL_ASSIGNED_TO_NAME',
+    'id' => 'ASSIGNED_USER_ID',
+    'width' => '15%',
+    'default' => true,
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_module' => 'Users',
+    'target_record_key' => 'assigned_user_id',
+  ),
+  'edit_button' => 
+  array (
+    'widget_class' => 'SubPanelEditButton',
+    'module' => 'AOS_Quotes',
+    'width' => '4%',
+    'default' => true,
+  ),
+  'remove_button' => 
+  array (
+    'widget_class' => 'SubPanelRemoveButton',
+    'module' => 'AOS_Quotes',
+    'width' => '5%',
+    'default' => true,
+  ),
+  'currency_id' => 
+  array (
+    'usage' => 'query_only',
+  ),
+);

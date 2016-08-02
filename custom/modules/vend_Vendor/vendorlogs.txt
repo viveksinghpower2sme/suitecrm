@@ -1,0 +1,72 @@
+28/07/2016 01:08:54
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7371","Name":"hitesh steel","PhoneNo":"8899889988","EMail":"hitesh@gmail.com","VendorPostingGroup":"GUJ-METAL","GenBusinessPostingGroup":"domestic","PANNo":"AKNHG1564A","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD3510667","lAddress":"a1","lAddress2":"a2","lPostCode":"143001","CityCode":"Amritsar","StateCode":"Punjab","lTIN":"12345678923","lCST":"cst1","lECC":"abcae1111axd001","lRange":"r2","lDivision":"divisuon 1","lCollectorate":"colle 1","lCommissionRate":"0","lSoftDelete":"","Email":"hitesh@gmail.com"}}}
+Response :{"return_value":true,"errorMessage":""}
+28/07/2016 01:09:06
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"VN7371","Name":"hitesh steel","PhoneNo":"8899889988","EMail":"hitesh@gmail.com","VendorPostingGroup":"GUJ-METAL","GenBusinessPostingGroup":"domestic","PANNo":"AKNHG1564A","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD3510667","lAddress":"a1","lAddress2":"a2","lPostCode":"143001","CityCode":"Amritsar","StateCode":"Punjab","lTIN":"12345678923","lCST":"cst1","lECC":"abcae1111axd001","lRange":"r2","lDivision":"divisuon 1","lCollectorate":"colle 1","lCommissionRate":"0","lSoftDelete":"","Email":"hitesh@gmail.com"}}}
+Response :{"return_value":true,"errorMessage":""}
+28/07/2016 01:36:31
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7794","Name":"niharika polymer","PhoneNo":"8989111123","EMail":"nihari@gmail.com","VendorPostingGroup":"SOUTH-META","GenBusinessPostingGroup":"import","PANNo":"HJKLG1233A","SoftDelete":""}}
+Response :{"return_value":false,"errorMessage":"The field Gen. Bus. Posting Group of table Vendor contains a value (IMPORT) that cannot be found in the related table (Gen. Business Posting Group)."}
+28/07/2016 01:36:59
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7794","Name":"niharika polymer","PhoneNo":"8989111123","EMail":"nihari@gmail.com","VendorPostingGroup":"SOUTH-META","GenBusinessPostingGroup":"domestic","PANNo":"HJKLG1233A","SoftDelete":""}}
+Response :{"return_value":true,"errorMessage":""}
+28/07/2016 01:48:21
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7794","Name":"niharika polymer","PhoneNo":"8989111123","EMail":"nihari@gmail.com","VendorPostingGroup":"SOUTH-META","GenBusinessPostingGroup":"import","PANNo":"HJKLG1233A","SoftDelete":""}}
+Response :{"return_value":false,"errorMessage":"The field Gen. Bus. Posting Group of table Vendor contains a value (IMPORT) that cannot be found in the related table (Gen. Business Posting Group)."}
+28/07/2016 01:48:51
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7794","Name":"niharika polymer","PhoneNo":"8989111123","EMail":"nihari@gmail.com","VendorPostingGroup":"SOUTH-META","GenBusinessPostingGroup":"domestic","PANNo":"HJKLG1233A","SoftDelete":""}}
+Response :{"return_value":true,"errorMessage":""}
+29/07/2016 12:40:33
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"ven12345","Name":"vivek","PhoneNo":"9873444694","EMail":"vivek@gmail.com","VendorPostingGroup":"Code","GenBusinessPostingGroup":"","PANNo":"PANUY6789K","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD9846750","lAddress":"a1","lAddress2":"a2","lPostCode":"143001","CityCode":"Amritsar","StateCode":"Punjab","lTIN":"","lCST":"cst1","lECC":"","lRange":"r2","lDivision":"divisuon 1","lCollectorate":"colle 1","lCommissionRate":"0","lSoftDelete":"","Email":"vivek@gmail.com"}}}
+Response :{"return_value":false,"errorMessage":"The length of the string is 11, but it must be less than or equal to 10 characters. Value: VEN12345-01"}
+29/07/2016 12:40:33
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7371","Name":"hitesh steel","PhoneNo":"8899889988","EMail":"hitesh@gmail.com","VendorPostingGroup":"GUJ-METAL","GenBusinessPostingGroup":"domestic","PANNo":"AKNHG1564A","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD9846750","lAddress":"a1","lAddress2":"a2","lPostCode":"143001","CityCode":"Amritsar","StateCode":"Punjab","lTIN":"","lCST":"cst1","lECC":"","lRange":"r2","lDivision":"divisuon 1","lCollectorate":"colle 1","lCommissionRate":"0","lSoftDelete":"","Email":"hitesh@gmail.com"}}}
+Response :{"return_value":true,"errorMessage":""}
+01/08/2016 05:46:11
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"VN7371","Name":"hitesh steel","PhoneNo":"8899889988","EMail":"hitesh@gmail.com","VendorPostingGroup":"GUJ-METAL","GenBusinessPostingGroup":"domestic","PANNo":"AKNHG1564A","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD9846750","lAddress":"","lAddress2":"","lPostCode":"0","CityCode":"","StateCode":"","lTIN":"","lCST":"","lECC":"","lRange":"","lDivision":"","lCollectorate":"","lCommissionRate":"0","lSoftDelete":"","Email":"hitesh@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+01/08/2016 05:46:11
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN7794","Name":"niharika polymer","PhoneNo":"8989111123","EMail":"nihari@gmail.com","VendorPostingGroup":"SOUTH-META","GenBusinessPostingGroup":"domestic","PANNo":"HJKLG1233A","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD9846750","lAddress":"","lAddress2":"","lPostCode":"0","CityCode":"","StateCode":"","lTIN":"","lCST":"","lECC":"","lRange":"","lDivision":"","lCollectorate":"","lCommissionRate":"0","lSoftDelete":"","Email":"nihari@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 12:15:45
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 12:24:33
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 12:25:29
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD5374994","lAddress":"udyog vihar phase 1","lAddress2":"udyog vihar phase 2","lPostCode":"122002","CityCode":"Gurgaon","StateCode":"Haryana","lTIN":"12345678922","lCST":"907828299774","lECC":"abeae1111axd001","lRange":"767","lDivision":"8","lCollectorate":"","lCommissionRate":"0","lSoftDelete":"","Email":"jindal@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 01:59:48
+Save Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD8159874","lAddress":"sector 15,part1","lAddress2":"sector 15 ,part 2","lPostCode":"122002","CityCode":"Gurgaon","StateCode":"Haryana","lTIN":"92345678923","lCST":"","lECC":"abcae1101axd001","lRange":"","lDivision":"","lCollectorate":"","lCommissionRate":"0","lSoftDelete":"","Email":"jindal@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 03:15:39
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD2520530","lAddress":"dlf phase 1","lAddress2":"dlf phase 2","lPostCode":"122002","CityCode":"Gurgaon","StateCode":"Haryana","lTIN":"12348678923","lCST":"77988998888","lECC":"abcae1111axd001","lRange":"78","lDivision":"90","lCollectorate":"57686","lCommissionRate":"0","lSoftDelete":"","Email":"jindal@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 03:17:04
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD2520530","lAddress":"dlf phase 1","lAddress2":"dlf phase 2","lPostCode":"122002","CityCode":"Gurgaon","StateCode":"Haryana","lTIN":"12348678923","lCST":"77988998888","lECC":"abcae1111axd001","lRange":"78","lDivision":"90","lCollectorate":"57686","lCommissionRate":"0","lSoftDelete":"","Email":"jindal@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 03:18:07
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD2520530","lAddress":"dlf phase 1","lAddress2":"dlf phase 2","lPostCode":"122002","CityCode":"Gurgaon","StateCode":"Haryana","lTIN":"12348678923","lCST":"77988998888","lECC":"abcae1111axd001","lRange":"78","lDivision":"90","lCollectorate":"57686","lCommissionRate":"0","lSoftDelete":"","Email":"jindal@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"
+02/08/2016 03:19:51
+Delete Vendor : 
+Request :{"VendorDetails":{"No":"VN1261","Name":"jindal new vendor","PhoneNo":"8990023443","EMail":"jindal@gmail.com","VendorPostingGroup":"EAST-METAL","GenBusinessPostingGroup":"domestic","PANNo":"aowps7678Q","SoftDelete":""},"AddtionalInformation":{"VendorLocations":{"lCode":"ADD2520530","lAddress":"dlf phase 1","lAddress2":"dlf phase 2","lPostCode":"122002","CityCode":"Gurgaon","StateCode":"Haryana","lTIN":"12348678923","lCST":"77988998888","lECC":"abcae1111axd001","lRange":"78","lDivision":"90","lCollectorate":"57686","lCommissionRate":"0","lSoftDelete":"","Email":"jindal@gmail.com"}}}
+Response :"<Soap:Envelope xmlns:Soap=\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\"><Soap:Body><ImportVendorDetails_Result xmlns=\"urn:microsoft-dynamics-schemas\/codeunit\/RFQCreation\"><return_value>true<\/return_value><errorMessage\/><\/ImportVendorDetails_Result><\/Soap:Body><\/Soap:Envelope>"

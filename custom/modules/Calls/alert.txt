@@ -1,0 +1,1 @@
+update calls set calls.status='Not Held',calls.date_modified =NOW() where id IN ('bb405e44-dbd9-c26b-ad85-571dbe68844b','cec9d491-7d8d-2e13-d4da-571dbe924556',)
