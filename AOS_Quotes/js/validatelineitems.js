@@ -1,4 +1,0 @@
-function lineitemvalidation(count)
-{
-	
-}
